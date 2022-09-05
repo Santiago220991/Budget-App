@@ -1,24 +1,54 @@
-# README
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Budget App
 
-Things you may want to cover:
+> This app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-* Ruby version
+Everything is based on the ERD class diagram presented below.
 
-* System dependencies
+<img src="./budget_app_uml.png" alt="ERD Budget App" />
 
-* Configuration
+## Built With
 
-* Database creation
+- Rails, Ruby, SQL, Devise, Cancancan, RSpec, Capybara. 
 
-* Database initialization
+## Setup Project
+- Clone repo by using (https://github.com/Santiago220991/Budget-App.git)
+- cd Budget-App
+- Install dependencies with `bundle install`
 
-* How to run the test suite
+## Usage
+- Run  `rake db:create`
+- Run `rails server`
 
-* Services (job queues, cache servers, search engines, etc.)
 
-* Deployment instructions
+## Tests
+- Run test with `rspec`
 
-* ...
+## Author
+
+👤 **Santiago Cárdenas**
+
+- GitHub: [@Santiago Cárdenas](https://github.com/Santiago220991)
+- LinkedIn: [Santiago Cárdenas](https://www.linkedin.com/in/alexandersantiagocardenas/)
+- Twitter: [@SanCardenas10](https://twitter.com/SanCardenas10)
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/Santiago220991/Budget-App/issues).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Original design idea by [Gregoire Vella on Behance](https://www.behance.net/gregoirevella).
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
