@@ -5,7 +5,7 @@ class GroupsController < ApplicationController
     @groups.each do |group|
       @expenses = Expense.joins(:group_expenses,
                                 :groups).where(group_expenses: { group_id: group.id }).group(:amount).sum(:amount)
-      @total_arr << @expenses.values
+      @total_arr << @expenses.values.sum
     end
   end
 

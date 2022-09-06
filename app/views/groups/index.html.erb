@@ -1,7 +1,7 @@
 <h2>Categories</h2>
 <% @groups.each_with_index do |group,index|%>
     <%=link_to group_path(id: group.id) do%>
-    <div><img src=<%=group.icon%> alt="Categorie image"> <%=group.name%> <%=@total_arr[index][0]%></div> 
+    <div><img src=<%=group.icon%> alt="Categorie image"> <%=group.name%> <%=@total_arr[index]%></div> 
     <%end%> 
 <%end%>
 <%=link_to "New Category", new_group_path%> 
