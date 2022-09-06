@@ -5,8 +5,6 @@ class Ability
     # Define abilities for the user here. For example:
     #
     return unless user.present?
-
-    can :read, :all
     can :manage, Group, author_id: user.id
     can :manage, Expense, author_id: user.id
     can :manage, GroupExpense

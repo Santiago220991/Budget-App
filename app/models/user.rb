@@ -11,6 +11,6 @@ class User < ApplicationRecord
   validates :email, presence: true, format: { with: Devise.email_regexp }
 
   def admin?
-    current_user.role == 'admin'
+    role == 'admin'
   end
 end
