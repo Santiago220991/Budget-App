@@ -8,4 +8,6 @@
         <%=expense.amount%>
     </div>
 <%end%>
+<%if can? :manage, @expense%>
 <%=link_to "Add Expense", new_group_expense_path(group_id: params[:id]) %>
+<%end%>
