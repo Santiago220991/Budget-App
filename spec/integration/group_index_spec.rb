@@ -10,6 +10,7 @@ RSpec.describe 'Group', type: :feature do
       @user = User.create(name: 'user', email: 'user@gmail.com', password: 123_456)
       @group = Group.create!(name: 'food', icon: 'url', author: @user)
       @expense = Expense.create!(name:"KFC", amount:100, author: @user)
+      @group_expense= GroupExpense.create!(group: @group, expense: @expense)
       visit user_session_path
       fill_in 'user_email', with: @user.email
       fill_in 'user_password', with: @user.password
