@@ -4,6 +4,6 @@ class Expense < ApplicationRecord
     has_many :groups, through: :group_expenses
 
     validates :name, presence:true
-    validates :amount, presence:true, numecarility: {:greater_than: 0}
+    validates :amount, presence:true, numericality: { greater_than: 0 }
   end
   

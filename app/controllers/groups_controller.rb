@@ -13,9 +13,9 @@ class GroupsController < ApplicationController
         @group_expenses=GroupExpense.where(group_id: params[:id]).order(created_at: :desc)
         @total=0
         @group_expenses.each do |element|
-        @expense=Expense.find(element.expense_id)
-        @total+=@expense.amount
-        @expenses<<@expense
+            @expense=Expense.find(element.expense_id)
+            @total+=@expense.amount
+            @expenses<<@expense
         end
         
     end
@@ -30,9 +30,9 @@ class GroupsController < ApplicationController
         @group.icon=params[:icon]
         @group.author=current_user
         if @group.save!
-            redirect_to root_path notice: "New group created"
+            redirect_to root_path, notice: "New category created"
         else
-            :new
+         render  "new"
         end
     end
 end

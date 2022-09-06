@@ -7,5 +7,10 @@ class User < ApplicationRecord
     has_many :expenses
 
     validates :name, presence: true
+    validates :role, presence: true
+    
+    def admin?
+      current_user.role=="admin"
+    end
   end
   
