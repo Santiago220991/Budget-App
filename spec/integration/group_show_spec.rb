@@ -8,14 +8,14 @@ RSpec.describe 'Group', type: :feature do
       Expense.destroy_all
       GroupExpense.destroy_all
       @user = User.create!(name: 'user', email: 'user@gmail.com', password: 123_456)
-      @group = Group.create!(name: "food", icon:"url", author: @user)
+      @group = Group.create!(name: 'food', icon: 'url', author: @user)
       visit user_session_path
       fill_in 'user_email', with: @user.email
       fill_in 'user_password', with: @user.password
       click_button 'Log in'
       visit group_path(id: @group.id)
     end
-    it 'should render Expenses title' do  
+    it 'should render Expenses title' do
       expect(page).to have_content('Expenses')
     end
     it 'should render a Add Expense link' do
