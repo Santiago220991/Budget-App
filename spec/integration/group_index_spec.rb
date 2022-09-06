@@ -9,8 +9,8 @@ RSpec.describe 'Group', type: :feature do
       GroupExpense.destroy_all
       @user = User.create(name: 'user', email: 'user@gmail.com', password: 123_456)
       @group = Group.create!(name: 'food', icon: 'url', author: @user)
-      @expense = Expense.create!(name:"KFC", amount:100, author: @user)
-      @group_expense= GroupExpense.create!(group: @group, expense: @expense)
+      @expense = Expense.create!(name: 'KFC', amount: 100, author: @user)
+      @group_expense = GroupExpense.create!(group: @group, expense: @expense)
       visit user_session_path
       fill_in 'user_email', with: @user.email
       fill_in 'user_password', with: @user.password
@@ -31,10 +31,10 @@ RSpec.describe 'Group', type: :feature do
       expect(page).to have_current_path(new_group_path)
     end
     it 'should render a category called food' do
-      expect(page).to have_content("food")
+      expect(page).to have_content('food')
     end
     it 'should render a total amount of food' do
-      expect(page).to have_content("food 100")
+      expect(page).to have_content('food 100')
     end
   end
 end
