@@ -13,7 +13,7 @@ class ExpensesController < ApplicationController
             @group_expense.group_id=params[:group_id]
             @group_expense.expense_id=@expense.id
             if @group_expense.save!
-                redirect_to group_path(id: params[:group_id])
+                redirect_to group_path(id: params[:group_id]), notice: "New expense created"
             else
             :new
             end
