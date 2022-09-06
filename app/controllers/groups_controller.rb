@@ -32,7 +32,7 @@ class GroupsController < ApplicationController
     @group.icon = params[:icon]
     @group.author = current_user
     if @group.save!
-      redirect_to root_path, notice: 'New category created'
+      redirect_to groups_path, notice: 'New category created'
     else
       render 'new'
     end
