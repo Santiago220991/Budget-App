@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
   def index
     @groups = Group.where(author_id: current_user).order(created_at: :desc)
     @total_arr = []
@@ -30,7 +32,7 @@ class GroupsController < ApplicationController
     @group.icon = params[:icon]
     @group.author = current_user
     if @group.save!
-      redirect_to root_path, notice: 'New category created'
+      redirect_to groups_path, notice: 'New category created'
     else
       render 'new'
     end

@@ -4,4 +4,6 @@
     <div><img src=<%=group.icon%> alt="Categorie image"> <%=group.name%> <%=@total_arr[index]%></div> 
     <%end%> 
 <%end%>
+<%if can? :manage, Group %>
 <%=link_to "New Category", new_group_path%> 
+<%end%>
