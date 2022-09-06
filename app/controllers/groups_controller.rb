@@ -1,4 +1,6 @@
 class GroupsController < ApplicationController
+  load_and_authorize_resource
+  before_action :authenticate_user!
   def index
     @groups = Group.where(author_id: current_user).order(created_at: :desc)
     @total_arr = []
