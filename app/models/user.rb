@@ -6,8 +6,9 @@ class User < ApplicationRecord
     has_many :groups
     has_many :expenses
 
-    validates :name, presence: true
-    validates :role, presence: true
+    validates :name, presence: true, format: {with: /[a-zA-Z]/}
+    validates :role, presence: true, format: {with: /[a-zA-Z]/}
+    validates :email, presence: true, format: { with: Devise.email_regexp }
     
     def admin?
       current_user.role=="admin"
