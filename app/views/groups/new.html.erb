@@ -1,0 +1,11 @@
+<div>
+<%=link_to "<", groups_path%>
+<h2>Create New Categorie</h2>
+</div>
+<%= form_with url:groups_path do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %>
+  <%= form.label :icon, "Icon (URL)" %>
+  <%= form.text_field :icon %>
+  <%= form.submit "Create" %>
+<% end %>

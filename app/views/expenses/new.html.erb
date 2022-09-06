@@ -1,0 +1,11 @@
+<div>
+<%=link_to "<", group_path(params[:group_id])%>
+<h2>Create New Expense</h2>
+</div>
+<%= form_with url:group_expenses_path(group_id: params[:group_id]) do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name %>
+  <%= form.label :amount, "Amount $" %>
+  <%= form.number_field :amount, step: :any %>
+  <%= form.submit "Create" %>
+<% end %>

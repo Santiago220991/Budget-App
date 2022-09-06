@@ -1,0 +1,11 @@
+<div>
+<%=link_to "<", groups_path%>
+<h2>Expenses</h2>
+</div>
+<%=@total%>
+<% @expenses.each do |expense|%>    <div>
+        <%=expense.name%>
+        <%=expense.amount%>
+    </div>
+<%end%>
+<%=link_to "Add Expense", new_group_expense_path(group_id: params[:id]) %>
