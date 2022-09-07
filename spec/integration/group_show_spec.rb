@@ -17,17 +17,14 @@ RSpec.describe 'Group', type: :feature do
       click_button 'Log in'
       visit group_path(id: @group.id)
     end
-    it 'should render Expenses title' do
-      expect(page).to have_content('Expenses')
+    it 'should render EXPENSES title' do
+      expect(page).to have_content('EXPENSES')
     end
-    it 'should render a Add Expense link' do
-      expect(page).to have_content('Add Expense')
-    end
-    it 'should render a Log out button' do
-      expect(page).to have_content('Log out')
+    it 'should render a ADD EXPENSE link' do
+      expect(page).to have_content('ADD EXPENSE')
     end
     it 'should redirecto to new expense page' do
-      click_link 'Add Expense'
+      click_link 'ADD EXPENSE'
       expect(page).to have_current_path(new_group_expense_path(group_id: @group.id))
     end
     it 'should render a expense called KFC' do

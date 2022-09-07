@@ -1,11 +1,14 @@
-<div>
-<%=link_to "<", groups_path%>
-<h2>Create New Category</h2>
+<div class="header-container">
+<p><%=link_to "<", groups_path%></p>
+<h2>CREATE NEW CATEGORY</h2>
+<p></p>
 </div>
-<%= form_with url:groups_path do |form| %>
+<%= form_with url:groups_path, class:"new-form" do |form| %>
   <%= form.label :name, "Name" %>
   <%= form.text_field :name %>
   <%= form.label :icon, "Icon (URL)" %>
   <%= form.text_field :icon %>
-  <%= form.submit "Create" %>
+  <div class="create-btn">
+  <%= form.submit "CREATE"%>
+  </div>
 <% end %>

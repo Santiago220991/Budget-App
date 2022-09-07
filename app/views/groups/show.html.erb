@@ -1,13 +1,19 @@
-<div>
+<div class="header-container">
 <%=link_to "<", groups_path%>
-<h2>Expenses</h2>
+<h2>EXPENSES</h2>
+<p></p>
 </div>
-<%=@total%>
-<% @expenses.each do |expense|%>    <div>
-        <%=expense.name%>
-        <%=expense.amount%>
+<p class="total">Total: $<%=@total%></p>
+<div class="expenses-container">
+<% @expenses.each do |expense|%>    
+    <div class="expense">
+        <p><%=expense.name%></p>
+        <p>$<%=expense.amount%></p>
     </div>
 <%end%>
+</div>
+<div class="new-btn">
 <%if can? :manage, Expense%>
-<%=link_to "Add Expense", new_group_expense_path(group_id: params[:id]) %>
+<%=link_to "ADD EXPENSE", new_group_expense_path(group_id: params[:id]) %>
 <%end%>
+</div>

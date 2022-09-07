@@ -11,9 +11,6 @@
   </head>
 
   <body>
-      <% if current_user.present? %>
-      <%=current_user.name%> <%=button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }%> 
-      <% end %>
        <p class="notice"><%= notice %></p>
        <p class="alert"><%= alert %></p>
     <%= yield %>
