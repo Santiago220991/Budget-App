@@ -17,24 +17,24 @@ RSpec.describe 'Group', type: :feature do
       click_button 'Log in'
       visit groups_path
     end
-    it 'should render Categories title' do
-      expect(page).to have_content('Categories')
+    it 'should render CATEGORIES title' do
+      expect(page).to have_content('CATEGORIES')
     end
-    it 'should render a New Category link' do
-      expect(page).to have_content('New Category')
+    it 'should render a add category link' do
+      expect(page).to have_content('ADD CATEGORY')
     end
     it 'should render a Log out button' do
       expect(page).to have_content('Log out')
     end
-    it 'should redirec to to new food page' do
-      click_link 'New Category'
+    it 'should redirect to to new category page' do
+      click_link 'ADD CATEGORY'
       expect(page).to have_current_path(new_group_path)
     end
     it 'should render a category called food' do
       expect(page).to have_content('food')
     end
     it 'should render a total amount of food' do
-      expect(page).to have_content('food 100')
+      expect(page).to have_content('$100')
     end
   end
 end
