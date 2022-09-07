@@ -8,8 +8,8 @@
 <div class="categories-container">
 <% @groups.each_with_index do |group,index|%>
     <%=link_to group_path(id: group.id) do%>
-    <div class="categorie">
-    <img src=<%=group.icon%> alt="Categorie image"> 
+    <div class="category">
+    <img src=<%=group.icon%> alt="Category image"> 
     <p><%=group.name%></p> 
     <p>$<%=@total_arr[index]%></p>
     </div> 

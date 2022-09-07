@@ -93,9 +93,11 @@ a:link {
 .categories-container {
     padding-top: 2%;
     background-color: #f3eeee;
+    animation: enter-left;
+    animation-duration: 1.5s;
 }
 
-.categorie {
+.category {
     padding: 2%;
     margin-left: 2%;
     margin-right: 2%;
@@ -108,7 +110,7 @@ a:link {
     background-color: white;
 }
 
-.categorie img {
+.category img {
     width: 30%;
     height: 30%;
 }
@@ -196,6 +198,16 @@ a:link {
     color: var(--gray);
 }
 
+.expenses-container > *:nth-child(even) {
+    animation: enter-right;
+    animation-duration: 2s;
+}
+
+.expenses-container > *:nth-child(odd) {
+    animation: enter-left;
+    animation-duration: 2s;
+}
+
 .notice {
     text-align: center;
     color: var(--green)
@@ -205,3 +217,21 @@ a:link {
     text-align: center;
     color: red;
 }
+
+@keyframes enter-left {
+    from{
+      transform: translate(-1200px);
+    }
+    to{
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes enter-right {
+    from{
+      transform: translate(1200px);
+    }
+    to{
+      transform: translate(0);
+    }
+  }

@@ -11,7 +11,7 @@
         <p>$<%=expense.amount%></p>
     </div>
 <%end%>
-<div>
+</div>
 <div class="new-btn">
 <%if can? :manage, Expense%>
 <%=link_to "ADD EXPENSE", new_group_expense_path(group_id: params[:id]) %>
