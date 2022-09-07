@@ -4,9 +4,11 @@
 
 > This app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 
-Everything is based on the ERD class diagram presented below.
+<img src="./budget_calculator_home.png" />
 
-<img src="./budget_app_uml.png" alt="ERD Budget App" />
+## Live Demo
+
+[Budget Calculator Live Demo](https://santiago-budget-calculator.herokuapp.com/)
 
 ## Built With
 
