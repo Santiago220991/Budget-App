@@ -1,11 +1,14 @@
-<div>
+<div class="header-container">
 <%=link_to "<", group_path(params[:group_id])%>
-<h2>Create New Expense</h2>
+<h2>CREATE NEW EXPENSE</h2>
+<p></p>
 </div>
-<%= form_with url:group_expenses_path(group_id: params[:group_id]) do |form| %>
+<%= form_with url:group_expenses_path(group_id: params[:group_id]), class:"new-form" do |form| %>
   <%= form.label :name, "Name" %>
   <%= form.text_field :name %>
   <%= form.label :amount, "Amount $" %>
   <%= form.number_field :amount, step: :any %>
-  <%= form.submit "Create" %>
+  <div class="create-btn">
+  <%= form.submit "CREATE" %>
+  </div>
 <% end %>

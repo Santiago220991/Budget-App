@@ -1,3 +1,5 @@
-<p>Hola mundo</p>
-<%=link_to "Sign-up", new_user_registration_path %>
-<%=link_to "Sign-in", new_user_session_path%>
+<%=image_tag("budget_calculator.png", class: "splash-img")%>
+<div class="sign-links">
+    <%=link_to "SIGN UP", new_user_registration_path, class:"sign-up-link" %>
+    <%=link_to "LOG IN", new_user_session_path, class:"sign-in-link"%>
+</div>
