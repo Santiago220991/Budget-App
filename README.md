@@ -6,6 +6,7 @@
 <p align="center">
 <img src="./budget_calculator_home.png" />
 </p>
+
 ## Live Demo
 
 [Budget Calculator Live Demo](https://santiago-budget-calculator.herokuapp.com/)
