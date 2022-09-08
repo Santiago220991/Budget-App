@@ -1,0 +1,23 @@
+<div class="header-container">
+<p><%=current_user.name%></p> 
+<h2 class=title-categories>CATEGORIES</h2>
+ <% if current_user.present? %>
+      <%=button_to "Log out", destroy_user_session_path, method: :delete, data: { turbo: false }%> 
+      <% end %>
+</div>
+<div class="categories-container">
+<% @groups.each_with_index do |group,index|%>
+    <%=link_to group_path(id: group.id) do%>
+    <div class="category">
+    <img src=<%=group.icon%> alt="Category image"> 
+    <p><%=group.name%></p> 
+    <p>$<%=@total_arr[index]%></p>
+    </div> 
+    <%end%> 
+<%end%>
+</div>
+<div class="new-btn">
+<%if can? :manage, Group %>
+<%=link_to "ADD CATEGORY", new_group_path%> 
+<%end%>
+</div>

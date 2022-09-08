@@ -1,0 +1,250 @@
+@font-face {
+  font-family: 'Proxima Nova Bold';
+  src: url('/assets/FontsFree-Net-Proxima-Nova-Bold.otf');
+  font-family: 'Proxima Nova Light';
+  src: url('/assets/FontsFree-Net-FontsFree-Net-Proxima-Nova-2.ttf');
+}
+
+:root {
+  --blue: #3778c2;
+  --gray: #434b54;
+  --green: #5fb523;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.sign-links {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--blue);
+}
+
+.sign-links > * {
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: solid white 1px;
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.splash-img {
+  width: 100%;
+  height: 84%;
+  margin: 0;
+}
+
+a:link {
+  text-decoration: none;
+}
+
+.title {
+  text-align: center;
+  color: var(--gray);
+  margin-top: 30%;
+}
+
+.field {
+  text-align: center;
+  color: var(--gray);
+}
+
+.actions {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.actions > * {
+  width: 185px;
+  background-color: var(--blue);
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 4px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue);
+  padding-left: 10px;
+  padding-right: 10px;
+  font-family: "Proxima Nova Bold", sans-serif;
+}
+
+.header-container > * {
+  color: white;
+}
+
+.header-container a {
+  color: white;
+  font-size: 200%;
+}
+
+.categories-container {
+  padding-top: 2%;
+  background-color: #f3eeee;
+  animation: enter-left;
+  animation-duration: 1.5s;
+}
+
+.category {
+  padding: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  display: flex;
+  border: solid 1px var(--gray);
+  align-items: center;
+  font-family: "Proxima Nova Light", sans-serif;
+  margin-bottom: 10px;
+  justify-content: space-between;
+  background-color: white;
+}
+
+.category img {
+  width: 30%;
+  height: 30%;
+}
+
+.new-btn {
+  text-align: center;
+  background-color: var(--green);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  font-family: "Proxima Nova Light", sans-serif;
+  position: absolute;
+  bottom: 0;
+}
+
+.new-btn > * {
+  margin-left: 5%;
+  margin-right: 5%;
+  display: block;
+  border: solid white 1px;
+  border-radius: 4px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.create-btn > * {
+  width: 95%;
+  background-color: var(--green);
+  border: solid 1px white;
+  color: white;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.new-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 2%;
+  color: var(--gray);
+}
+
+.new-form > *:nth-child(odd) {
+  margin-bottom: 2%;
+}
+
+.create-btn {
+  text-align: center;
+  background-color: var(--green);
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: "Proxima Nova Light", sans-serif;
+  position: absolute;
+  bottom: 0;
+}
+
+.total {
+  text-align: right;
+  margin-right: 20px;
+  font-size: 20px;
+  font-family: "Proxima Nova Ligth", sans-serif;
+  color: var(--gray);
+}
+
+.expenses-container {
+  padding-top: 2%;
+  background-color: #f3eeee;
+}
+
+.expense {
+  display: flex;
+  justify-content: space-between;
+  padding: 2%;
+  border: solid 1px var(--gray);
+  margin-left: 2%;
+  margin-right: 2%;
+  font-family: "Proxima Nova Light", sans-serif;
+  margin-bottom: 10px;
+  background-color: white;
+  color: var(--gray);
+}
+
+.expenses-container > *:nth-child(even) {
+  animation: enter-right;
+  animation-duration: 2s;
+}
+
+.expenses-container > *:nth-child(odd) {
+  animation: enter-left;
+  animation-duration: 2s;
+}
+
+.notice {
+  text-align: center;
+  color: var(--green);
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.alert {
+  text-align: center;
+  color: red;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+@keyframes enter-left {
+  from {
+    transform: translate(-1200px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes enter-right {
+  from {
+    transform: translate(1200px);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
