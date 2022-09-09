@@ -4,7 +4,7 @@
 
 > This app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
 <p align="center">
-<img src="./budget_calculator_home.png" />
+ /home/santiago/Documents/Repos/Budget-App/app/assets/images/budget_calculator.png
 </p>
 
 ## Live Demo
