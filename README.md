@@ -10,7 +10,7 @@
  
 ## Live Demo
 
-[Budget Calculator Live Demo](https://santiago-budget-calculator.herokuapp.com/)
+[Budget Calculator Live Demo](https://budget-calculator-app.up.railway.app/)
 
 ## Built With
 
