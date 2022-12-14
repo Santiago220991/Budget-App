@@ -2,13 +2,15 @@
 
 # Budget App
 
-> This app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what.
+> This app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category to see how much money you spent and on what.
 
-<img src="./budget_calculator_home.png" />
-
+<p align="center">
+<img src="https://user-images.githubusercontent.com/98363075/189417331-02a86e54-4800-4f07-9ebf-3452aaaa7cac.png"
+</p>
+ 
 ## Live Demo
 
-[Budget Calculator Live Demo](https://santiago-budget-calculator.herokuapp.com/)
+[Budget Calculator Live Demo](https://budget-calculator-app.up.railway.app/)
 
 ## Built With
 
@@ -25,7 +27,7 @@
 
 
 ## Tests
-- Run test with `rspec`
+- Run test with `bundle exec rspec`
 
 ## Author
 
