@@ -27,7 +27,7 @@
 
 
 ## Tests
-- Run test with `rspec`
+- Run test with `bundle exec rspec`
 
 ## Author
 
