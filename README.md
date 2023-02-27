@@ -10,7 +10,7 @@
  
 ## Live Demo
 
-[Budget Calculator Live Demo](https://budget-calculator-app.up.railway.app/)
+[Budget Calculator Live Demo](https://budget-calculator-production.up.railway.app/)
 
 ## Built With
 
