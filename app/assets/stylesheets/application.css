@@ -97,6 +97,10 @@ a:link {
   color: white;
 }
 
+.header-container p {
+  width: min-content;
+}
+
 .header-container a {
   color: white;
   font-size: 200%;
@@ -114,6 +118,7 @@ a:link {
   margin-left: 2%;
   margin-right: 2%;
   display: flex;
+  flex-direction: column;
   border: solid 1px var(--gray);
   align-items: center;
   font-family: "Proxima Nova Light", sans-serif;
@@ -122,9 +127,27 @@ a:link {
   background-color: white;
 }
 
+.category-button-box {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
 .category img {
   width: 30%;
   height: 30%;
+}
+
+.category a {
+  display: flex;
+  justify-content: space-between;
+}
+
+.group-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
 }
 
 .new-btn {
@@ -200,15 +223,27 @@ a:link {
 
 .expense {
   display: flex;
-  justify-content: space-between;
-  padding: 2%;
+  flex-direction: column;
   border: solid 1px var(--gray);
+  font-family: "Proxima Nova Light", sans-serif;
+  padding: 2%;
   margin-left: 2%;
   margin-right: 2%;
-  font-family: "Proxima Nova Light", sans-serif;
   margin-bottom: 10px;
   background-color: white;
   color: var(--gray);
+}
+
+.expense-button-box {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.expense-info {
+  display: flex;
+  justify-content: space-between;
+ 
 }
 
 .expenses-container > *:nth-child(even) {
@@ -235,6 +270,10 @@ a:link {
   margin-bottom: 0;
 }
 
+.input {
+  margin-left: 10%;
+  margin-right: 10%;
+}
 @keyframes enter-left {
   from {
     transform: translate(-1200px);

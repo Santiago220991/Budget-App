@@ -5,9 +5,9 @@
 </div>
 <%= form_with url:groups_path, class:"new-form" do |form| %>
   <%= form.label :name, "Name" %>
-  <%= form.text_field :name %>
+  <%= form.text_field :name, class:"input"  %>
   <%= form.label :icon, "Icon (URL)" %>
-  <%= form.text_field :icon %>
+  <%= form.text_field :icon, class:"input" %>
   <div class="create-btn">
   <%= form.submit "CREATE"%>
   </div>
