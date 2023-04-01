@@ -22,4 +22,9 @@ class ExpensesController < ApplicationController
       :new
     end
   end
+
+  def destroy
+    group_expense = GroupExpense.find_by(group_id: params[:group_id], expense_id: params[:id])
+    redirect_to group_path(id: params[:group_id]) if group_expense.destroy
+  end
 end

@@ -3,12 +3,12 @@
 <h2>CREATE NEW EXPENSE</h2>
 <p></p>
 </div>
-<%= form_with url:group_expenses_path(group_id: params[:group_id]), class:"new-form" do |form| %>
+<%= form_with url:group_expenses_path(group_id: params[:group_id]), class:"new-form" do |form| %> 
   <%= form.label :name, "Name" %>
-  <%= form.text_field :name %>
+  <%= form.text_field :name, class:"input"  %>
   <%= form.label :amount, "Amount $" %>
-  <%= form.number_field :amount, step: :any %>
+  <%= form.number_field :amount, step: :any, class:"input" %>
   <div class="create-btn">
-  <%= form.submit "CREATE" %>
+      <%= form.submit "CREATE" %>
   </div>
 <% end %>

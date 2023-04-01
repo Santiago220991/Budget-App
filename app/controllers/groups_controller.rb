@@ -37,4 +37,9 @@ class GroupsController < ApplicationController
       render 'new'
     end
   end
+
+  def destroy
+    group = Group.find(params[:id])
+    redirect_to groups_path if Group.destroy(group.id)
+  end
 end
