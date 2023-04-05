@@ -23,6 +23,21 @@ class ExpensesController < ApplicationController
     end
   end
 
+  def edit
+    @expense = Expense.find(params[:id])
+  end
+
+  def update
+    @expense = Expense.find(params[:id])
+    @expense.name = params[:expense][:name]
+    @expense.amount = params[:expense][:amount]
+    if @expense.save!
+      redirect_to group_path(id: params[:group_id]), notice: 'Category Updated'
+    else
+      render 'update'
+    end
+  end
+
   def destroy
     group_expense = GroupExpense.find_by(group_id: params[:group_id], expense_id: params[:id])
     redirect_to group_path(id: params[:group_id]) if group_expense.destroy
