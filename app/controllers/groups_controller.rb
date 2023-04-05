@@ -38,6 +38,21 @@ class GroupsController < ApplicationController
     end
   end
 
+  def edit
+    @group = Group.find(params[:id])
+  end
+
+  def update
+    @group=Group.find(params[:id])
+    @group.name=params[:group][:name]
+    @group.icon=params[:group][:icon]
+    if @group.save!
+      redirect_to groups_path, notice: 'Category Updated'
+    else
+      render 'update'
+    end
+  end
+
   def destroy
     group = Group.find(params[:id])
     redirect_to groups_path if Group.destroy(group.id)
