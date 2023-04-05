@@ -9,15 +9,16 @@
 <% @groups.each_with_index do |group,index|%>
     <div class="category">
     <div class="category-button-box">
-    <%=button_to "Delete", group_path(group.id), method: :delete %>
+        <%=button_to "Update", edit_group_path(group.id), method: :get %>
+        <%=button_to "Delete", group_path(group.id), method: :delete %>
     </div>
     <%=link_to group_path(id: group.id) do%>
-    <img src=<%=group.icon%> alt="Category image"> 
-    <div class="group-info">
-    <p><%=group.name%></p> 
-    <p>$<%=@total_arr[index]%></p>
+        <img src=<%=group.icon%> alt="Category image"> 
+        <div class="group-info">
+        <p><%=group.name%></p> 
+        <p>$<%=@total_arr[index]%></p>
+        </div>
     </div>
-    </div> 
     <%end%> 
 <%end%>
 </div>

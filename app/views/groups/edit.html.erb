@@ -1,0 +1,14 @@
+<div class="header-container">
+<p><%=link_to "<", groups_path%></p>
+<h2>UPDATE CATEGORY</h2>
+<p></p>
+</div>
+<%= form_with model: @group, url:group_path(params[:id]), class:"new-form", method: :patch do |form| %>
+  <%= form.label :name, "Name" %>
+  <%= form.text_field :name, class:"input"  %>
+  <%= form.label :icon, "Icon (URL)" %>
+  <%= form.text_field :icon, class:"input" %>
+  <div class="create-btn">
+      <%= form.submit "Update"%>
+  </div>
+<% end %>
