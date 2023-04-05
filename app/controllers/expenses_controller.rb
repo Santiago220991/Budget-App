@@ -28,9 +28,9 @@ class ExpensesController < ApplicationController
   end
 
   def update
-    @expense=Expense.find(params[:id])
-    @expense.name=params[:expense][:name]
-    @expense.amount=params[:expense][:amount]
+    @expense = Expense.find(params[:id])
+    @expense.name = params[:expense][:name]
+    @expense.amount = params[:expense][:amount]
     if @expense.save!
       redirect_to group_path(id: params[:group_id]), notice: 'Category Updated'
     else

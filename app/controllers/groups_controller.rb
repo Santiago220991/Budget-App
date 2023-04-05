@@ -43,9 +43,9 @@ class GroupsController < ApplicationController
   end
 
   def update
-    @group=Group.find(params[:id])
-    @group.name=params[:group][:name]
-    @group.icon=params[:group][:icon]
+    @group = Group.find(params[:id])
+    @group.name = params[:group][:name]
+    @group.icon = params[:group][:icon]
     if @group.save!
       redirect_to groups_path, notice: 'Category Updated'
     else
