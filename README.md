@@ -10,7 +10,7 @@
  
 ## Live Demo
 
-[Budget Calculator Live Demo](https://budget-app-z0bt.onrender.com)
+[Budget Calculator Live Demo](https://budget-app-z0bt.onrender.com/)
 
 ## Built With
 
